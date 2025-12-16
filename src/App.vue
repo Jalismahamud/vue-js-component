@@ -1,17 +1,27 @@
 <script setup>
-import { ref } from 'vue'
-import TestComponent from './components/TestComponent.vue'
+import { reactive, ref } from 'vue'
+import TestComponent from './components/TestComponent.vue';
+import PersonComponent from './components/PersonComponent.vue';
 
 const name = ref('Jalis Mahamud')
 const email = ref('jon@gmail.com')
+
+const person = reactive({
+  name: 'jalis Mahamud',
+  email: 'jalis@mahamud.com',
+  age: 25
+});
 </script>
 
 <template>
   <div>
-    <p>Name: {{ name }}</p>
-    <p>Email: {{ email }}</p>
+    <p>Name: {{ person.name }}</p>
+    <p>Email: {{ person.email }}</p>
+    <p>Age: {{ person.age }}</p>
   </div>
 
-  <TestComponent label="Name" v-model="name" />
-  <TestComponent label="Email" v-model="email" />
+ <div>
+   <PersonComponent :person="person" />
+ </div>
+ 
 </template>
