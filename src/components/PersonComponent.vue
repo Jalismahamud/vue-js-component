@@ -1,4 +1,5 @@
 <script setup>
+    import TestComponent  from './TestComponent.vue';
     const props = defineProps([
         'person'
     ]);
@@ -6,11 +7,8 @@
 
 <template>
     <p>
-        <label for="">Name</label><br>
-        <input type="text" v-model="person.name"><br>
-        <label for="">Email</label><br>
-        <input type="text" v-model="person.email"><br>
-        <label for="">Age</label><br>
-        <input type="text" v-model="person.age"><br>
+        <TestComponent label="Name" v-model="person.name" /><br>
+        <TestComponent label="Email" v-model="person.email" /> <br>
+        <TestComponent label="Age" v-model="person.age" />
     </p>
 </template>
