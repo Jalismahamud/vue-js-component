@@ -4,6 +4,7 @@ import TestComponent from './components/TestComponent.vue';
 import PersonComponent from './components/PersonComponent.vue';
 import NameComponent from './components/NameComponent.vue';
 import CheckboxComponent from './components/CheckboxComponent.vue';
+import ComponentA from './components/ComponentA.vue';
 
 
 const name = ref('Jalis Mahamud')
@@ -15,6 +16,10 @@ const person = reactive({
   age: 25
 });
 
+const course = reactive({
+  name: 'Vue 3 Course',
+  price: 4333
+})
 const taskStatus = ref(true);
 const fname = ref('Jalis');
 const lname = ref('Mahamud');
@@ -22,7 +27,10 @@ const lname = ref('Mahamud');
 
 <template>
 
- <div>
+ <p>This is App.vue file . {{ course.name }}</p>
+  <componentA :course="course" />
+
+ <!-- <div>
   <p class="pb-4 text-green-400">Orgining Taks Status: {{  taskStatus }}</p>
   <CheckboxComponent v-model="taskStatus" />
 
@@ -48,6 +56,6 @@ const lname = ref('Mahamud');
 
  <div>
    <PersonComponent :person="person" />
- </div>
+ </div> -->
  
 </template>
