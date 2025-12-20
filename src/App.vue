@@ -36,6 +36,10 @@ import Sidebar from './components/Sidebar.vue';
    <Blog />
    <Sidebar />
 
+   <main>
+    <router-view></router-view>
+   </main>
+
   <!-- <div class="text-center">
     <label for="">Components Example</label>
     <p>
