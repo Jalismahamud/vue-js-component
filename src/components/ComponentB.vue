@@ -1,13 +1,17 @@
 <script setup>
     import ComponentC  from './ComponentC.vue';
+    import { inject } from 'vue';
 
-    const props = defineProps(['course']);
+
+    const course = inject('course')
+
+    // const props = defineProps(['course']);
 </script>
 
 <template>
 
-    <p>This is component B: {{  course.name }}</p>
-    <p>Course price: {{ course.price }}</p>
+    <p>jalis {{  course.name }}</p>
+    <p> {{ course.price }}</p>
 
     <ComponentC :course="course" />
 </template>

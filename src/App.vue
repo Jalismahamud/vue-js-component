@@ -1,5 +1,5 @@
 <script setup>
-import { reactive, ref } from 'vue'
+import { reactive, ref, provide } from 'vue'
 import TestComponent from './components/TestComponent.vue';
 import PersonComponent from './components/PersonComponent.vue';
 import NameComponent from './components/NameComponent.vue';
@@ -20,6 +20,8 @@ const course = reactive({
   name: 'Vue 3 Course',
   price: 4333
 })
+
+provide('course' , course);
 const taskStatus = ref(true);
 const fname = ref('Jalis');
 const lname = ref('Mahamud');
