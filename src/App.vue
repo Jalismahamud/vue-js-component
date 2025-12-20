@@ -7,27 +7,36 @@ import CheckboxComponent from './components/CheckboxComponent.vue';
 import ComponentA from './components/ComponentA.vue';
 import {course} from './data/data.js';
 import Button from './components/Button.vue';
+import Home from './components/Home.vue';
+import About from './components/About.vue';
+import Blog from './components/Blog.vue';
+import Sidebar from './components/Sidebar.vue';
 
-const name = ref('Jalis Mahamud')
-const email = ref('jon@gmail.com')
+// const name = ref('Jalis Mahamud')
+// const email = ref('jon@gmail.com')
 
-const person = reactive({
-  name: 'jalis Mahamud',
-  email: 'jalis@mahamud.com',
-  age: 25
-});
+// const person = reactive({
+//   name: 'jalis Mahamud',
+//   email: 'jalis@mahamud.com',
+//   age: 25
+// });
 
 
 
-provide('course' , course);
-const taskStatus = ref(true);
-const fname = ref('Jalis');
-const lname = ref('Mahamud');
+// provide('course' , course);
+// const taskStatus = ref(true);
+// const fname = ref('Jalis');
+// const lname = ref('Mahamud');
 </script>
 
 <template>
 
-  <div class="text-center">
+   <Home />
+   <About />
+   <Blog />
+   <Sidebar />
+
+  <!-- <div class="text-center">
     <label for="">Components Example</label>
     <p>
       <Button>
@@ -41,7 +50,7 @@ const lname = ref('Mahamud');
       </Button>
     
     </p>
-  </div>
+  </div> -->
 
 
  <!-- <p>This is app.vue . {{ course.duration }}</p>
