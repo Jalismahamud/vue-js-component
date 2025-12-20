@@ -5,7 +5,7 @@ import PersonComponent from './components/PersonComponent.vue';
 import NameComponent from './components/NameComponent.vue';
 import CheckboxComponent from './components/CheckboxComponent.vue';
 import ComponentA from './components/ComponentA.vue';
-
+import {course} from './data/data.js';
 
 const name = ref('Jalis Mahamud')
 const email = ref('jon@gmail.com')
@@ -16,10 +16,7 @@ const person = reactive({
   age: 25
 });
 
-const course = reactive({
-  name: 'Vue 3 Course',
-  price: 4333
-})
+
 
 provide('course' , course);
 const taskStatus = ref(true);
@@ -29,8 +26,8 @@ const lname = ref('Mahamud');
 
 <template>
 
- <p>This is App.vue file . {{ course.name }}</p>
-  <componentA :course="course" />
+ <p>This is app.vue . {{ course.duration }}</p>
+ <componentA />
 
  <!-- <div>
   <p class="pb-4 text-green-400">Orgining Taks Status: {{  taskStatus }}</p>

@@ -1,5 +1,6 @@
 <script setup>
     import ComponentB from './ComponentB.vue';
+import {course} from '../data/data.js';
     // const props = defineProps(
     //     ['course']
     // );
@@ -7,16 +8,17 @@
 
     import {inject} from 'vue';
 
-    provide('course', course)
+    // provide('course', course)
 
-    const course = inject('course')
+    // const course = inject('course')
 </script>
 
 <template>
-    <p>
+    <!-- <p>
         Course Name in Component B {{ course.name }}
         <span>Test : {{ course.price }}</span>
-    </p>
+    </p> -->
+    <h3>This is component A.. {{ course.name }}</h3>
     <p>
         <ComponentB/>
     </p>
