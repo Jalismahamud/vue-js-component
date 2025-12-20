@@ -8,6 +8,9 @@
                 <slot>
                     Click Me
                 </slot>
+                <slot name="nameSlot">
+                    Hello brother
+                </slot>
             </span>
         </div>
     </button>

@@ -31,7 +31,13 @@ const lname = ref('Mahamud');
     <label for="">Components Example</label>
     <p>
       <Button>
-        <i><b></b></i>
+        <i><b>Hi</b></i>
+      </Button>
+      <Button v-slot:nameSlot>
+        <i><b>Jalis </b></i>
+      </Button>
+      <Button #nameSlot>
+        <i><b>jack </b></i>
       </Button>
     
     </p>
