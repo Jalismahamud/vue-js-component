@@ -6,6 +6,7 @@ import NameComponent from './components/NameComponent.vue';
 import CheckboxComponent from './components/CheckboxComponent.vue';
 import ComponentA from './components/ComponentA.vue';
 import {course} from './data/data.js';
+import Button from './components/Button.vue';
 
 const name = ref('Jalis Mahamud')
 const email = ref('jon@gmail.com')
@@ -26,8 +27,19 @@ const lname = ref('Mahamud');
 
 <template>
 
- <p>This is app.vue . {{ course.duration }}</p>
- <componentA />
+  <div class="text-center">
+    <label for="">Components Example</label>
+    <p>
+      <Button>
+        <i><b></b></i>
+      </Button>
+    
+    </p>
+  </div>
+
+
+ <!-- <p>This is app.vue . {{ course.duration }}</p>
+ <componentA /> -->
 
  <!-- <div>
   <p class="pb-4 text-green-400">Orgining Taks Status: {{  taskStatus }}</p>
